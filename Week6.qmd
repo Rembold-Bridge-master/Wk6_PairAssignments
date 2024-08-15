@@ -1,0 +1,50 @@
+---
+title: "Week 6 Pair Problem"
+format:
+  html:
+    theme:
+      light: 
+        - cosmo
+        - ./psets.scss
+      dark: darkly
+    fontsize: 1.2em
+    highlight-style: atom-one
+    toc: true
+    toc-depth: 2
+    html-math-method: katex
+    embed-resources: true
+    title-block-banner: linear-gradient(90deg, rgba(117,76,245,1) 0%, rgba(0,212,255,1) 100%)
+    title-block-banner-color: white
+    smooth-scroll: true
+    output-file: "index.html"
+---
+
+This week we are focused on a problem revolving around working with linked lists. Understanding the individual nodes of the list and how to move through a linked list will be the main learning objectives.
+
+```{=html}
+<a href='' target="_blank" class="btn btn-info" style='margin:auto; display: block; width:50%;'>Accept Problems</a>
+```
+<br>
+
+
+# Problem 1: List Counting
+One interesting facet of linked lists is that we rarely look at them as a whole collection. Instead, we generally only handle one "piece" or node of the list at a time. This means that some work needs to be done to, for instance, compute the length of a linked list. Instead of being able to rely on the `len` function, we are forced to loop through the list itself, following it along until we reach the end and counting up nodes as we go. For this problem you will investigate this in 3 different (but similar) forms of linked lists. All of these lists will be randomly generated based on the string provided at the top of the template file. Make sure you fill it out and then leave it constant throughout!
+
+## Part A
+The first linked list that you will be working with is the most basic. Each node defined on the list tracks two properties: a `label` that uniquely defines the node and a `next` that points to the next node on the list. The final node will point to `None` instead.
+
+Your task is to write a function that takes as an argument the first node of a simply linked list and then returns the number of nodes in the chain. The `Node` class has been configured to show reasonable output if printed, so feel free to print out the nodes as you go to check yourself!
+
+## Part B{#sec-b}
+Now we are working with a bit more complex of a linked list. Each node on this list tracks three properties:
+
+- `label`: a unique string labeling each node
+- `next`: the next node in the list (`None` if at the end)
+- `prev`: the previous node in the list (`None` if at the start)
+
+This sort of list allows a user to go either backwards or forwards through the list, as needed. Your task here is the same: to write a function that takes as an argument **a** node from this list and then returns the total number of nodes in the list. Note here that the node you start with _may not be at the start of the list_. Again, you can always print out any node to see its contents, which includes both what the previous node label and next node label are.
+
+## Part C
+Finally, we are putting a slight wrinkle on what you did in Part B. Here, the individual nodes are comprised of the same properties as in Part B, but the list as a whole is circular. That is to say, there is no start or finish: it loops around. Your starting node is thus somewhere in the "middle", and your task is to return the number of nodes in the loop (which is akin to the number of unique nodes in the linked list)
+
+If you haven't yet, you can also use the debugger to check yourself here! Simply place a breakpoint at some point after the list has been defined, and you can explore your way through the linked list in the variable explorer. Your function itself should work for any list though.
