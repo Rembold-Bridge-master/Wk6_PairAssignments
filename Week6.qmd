@@ -22,7 +22,7 @@ format:
 This week we are focused on a problem revolving around working with linked lists. Understanding the individual nodes of the list and how to move through a linked list will be the main learning objectives.
 
 ```{=html}
-<a href='' target="_blank" class="btn btn-info" style='margin:auto; display: block; width:50%;'>Accept Problems</a>
+<a href='https://classroom.github.com/a/sXBVws-e' target="_blank" class="btn btn-info" style='margin:auto; display: block; width:50%;'>Accept Problems</a>
 ```
 <br>
 
